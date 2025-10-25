@@ -1,11 +1,8 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Launcher" type="Application" factoryName="Application" nameIsGenerated="true">
-    <option name="envFilePaths">
-      <option value="$PROJECT_DIR$/.env" />
-    </option>
     <option name="MAIN_CLASS_NAME" value="agenda_de_contatos.Launcher" />
     <module name="cc_agenda_de_contatos" />
-    <option name="VM_PARAMETERS" value="--enable-native-access=javafx.graphics" />
+    <option name="VM_PARAMETERS" value="--enable-native-access=javafx.graphics --enable-native-access=org.xerial.sqlitejdbc" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="agenda_de_contatos.*" />
