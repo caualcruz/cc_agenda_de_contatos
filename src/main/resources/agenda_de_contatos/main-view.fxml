@@ -9,55 +9,115 @@
 <?import javafx.scene.text.Font?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<BorderPane fx:id="mainPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="agenda_de_contatos.controller.MainController">
+<BorderPane fx:id="mainPane"
+            prefHeight="720.0" prefWidth="1280.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="agenda_de_contatos.controller.MainController">
+
+    <!-- Sidebar lateral -->
     <left>
-        <VBox fx:id="sidebar" prefWidth="250.0" spacing="10.0" styleClass="sidebar" BorderPane.alignment="CENTER">
+        <VBox fx:id="sidebar"
+              prefWidth="250.0"
+              spacing="10.0"
+              styleClass="sidebar"
+              BorderPane.alignment="CENTER">
             <padding>
-                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
             </padding>
+
             <children>
+
+                <!-- Título -->
                 <Label styleClass="sidebar-title" text="Agenda cc">
                     <font>
-                        <Font name="System Bold" size="24.0" />
+                        <Font name="System Bold" size="24.0"/>
                     </font>
                     <VBox.margin>
-                        <Insets bottom="30.0" />
+                        <Insets bottom="30.0"/>
                     </VBox.margin>
                 </Label>
-                <Button fx:id="btnContatos" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#handleShowContatoList" styleClass="sidebar-button" text="Contatos">
+
+                <!-- Botão Contatos -->
+                <Button fx:id="btnContatos"
+                        alignment="BASELINE_LEFT"
+                        graphicTextGap="15.0"
+                        mnemonicParsing="false"
+                        onAction="#handleShowContatoList"
+                        styleClass="sidebar-button"
+                        text="Contatos">
                     <graphic>
-                        <FontIcon iconLiteral="fas-users" iconSize="20" styleClass="icon" />
+                        <FontIcon iconLiteral="fas-users" iconSize="20" styleClass="icon"/>
                     </graphic>
                 </Button>
-                <Button fx:id="btnAdicionar" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#handleShowContatoForm" styleClass="sidebar-button" text="Adicionar Novo">
+
+                <!-- Botão Adicionar -->
+                <Button fx:id="btnAdicionar"
+                        alignment="BASELINE_LEFT"
+                        graphicTextGap="15.0"
+                        mnemonicParsing="false"
+                        onAction="#handleShowContatoForm"
+                        styleClass="sidebar-button"
+                        text="Adicionar Novo">
                     <graphic>
-                        <FontIcon iconLiteral="fas-user-plus" iconSize="20" styleClass="icon" />
+                        <FontIcon iconLiteral="fas-user-plus" iconSize="20" styleClass="icon"/>
                     </graphic>
                 </Button>
-                <Button fx:id="" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#handleShowContatoForm" styleClass="sidebar-button" text="Trocar Tema">
+
+                <!-- Botão Trocar Tema -->
+                <Button fx:id="btnTrocarTema"
+                        alignment="BASELINE_LEFT"
+                        graphicTextGap="15.0"
+                        mnemonicParsing="false"
+                        onAction="#handleTrocarTema"
+                        styleClass="sidebar-button"
+                        text="Trocar Tema">
                     <graphic>
-                        <FontIcon iconLiteral="fas-circle-notch" iconSize="20" styleClass="icon" />
+                        <FontIcon iconLiteral="fas-circle-notch" iconSize="20" styleClass="icon"/>
                     </graphic>
                 </Button>
-                <Button fx:id="btnConfig" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#handleShowConfig" styleClass="sidebar-button" text="Configurações">
+
+                <!-- Botão Configurações -->
+                <Button fx:id="btnConfig"
+                        alignment="BASELINE_LEFT"
+                        graphicTextGap="15.0"
+                        mnemonicParsing="false"
+                        onAction="#handleShowConfig"
+                        styleClass="sidebar-button"
+                        text="Configurações">
                     <graphic>
-                        <FontIcon iconLiteral="fas-cog" iconSize="20" styleClass="icon" />
+                        <FontIcon iconLiteral="fas-cog" iconSize="20" styleClass="icon"/>
                     </graphic>
                 </Button>
-                <VBox VBox.vgrow="ALWAYS" />
-                <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" styleClass="sidebar-button" text="Sair">
+
+                <!-- Espaço flexível -->
+                <VBox VBox.vgrow="ALWAYS"/>
+
+                <!-- Botão Sair -->
+                <Button fx:id="btnSair"
+                        alignment="BASELINE_LEFT"
+                        graphicTextGap="15.0"
+                        mnemonicParsing="false"
+                        styleClass="sidebar-button"
+                        text="Sair">
                     <graphic>
-                        <FontIcon iconLiteral="fas-sign-out-alt" iconSize="20" styleClass="icon" />
+                        <FontIcon iconLiteral="fas-sign-out-alt" iconSize="20" styleClass="icon"/>
                     </graphic>
                 </Button>
+
             </children>
         </VBox>
     </left>
+
+    <!-- Área principal de conteúdo -->
     <center>
-        <AnchorPane fx:id="contentPane" styleClass="content-pane" BorderPane.alignment="CENTER">
+        <AnchorPane fx:id="contentPane"
+                    styleClass="content-pane"
+                    BorderPane.alignment="CENTER">
             <padding>
-                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
             </padding>
         </AnchorPane>
     </center>
+
 </BorderPane>
